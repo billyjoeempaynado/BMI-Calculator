@@ -6,10 +6,58 @@
   <link href="src/output.css" rel="stylesheet">
 </head>
 <body>
-  <h1 class="text-3xl font-bold underline bg-green-300">
-    Hello world!
-  </h1>
+  <nav class="bg-blue-300">
+    <div class="container">
+      <a href="#" class="navbar-brand">BMI Calculator</a>
+    </div>
+  </nav>
 
+  <form class="max-w-md mx-auto">
+  <div class="container displayContainer">
+      <div class="relative z-0 w-full mb-5 group">
+        <div>
+          <label for="Weight" class="block text-sm font-medium leading-6 text-gray-900">Weight</label>
+          <div class="relative">
+            <input type="text" name="Weight" id="weight-input" class="block w-full py-3 px-4 ps-20 rounded-md border-0  text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Kilo">
+            <div class="absolute inset-y-0 start-0 flex items-center text-gray-500 ps-px">
+              <label for="hs-inline-leading-select-country" class="sr-only">Weight</label>
+              <select id="weight-option" name="currency" class="h-full rounded-md border-0 bg-transparent py-0 pl-1 pr-7 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
+                <option value="kg">Kg</option>
+                <option value="lbs">Lbs</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative z-0 w-full mb-5 group">
+        <div>
+          <label for="price" class="block text-sm font-medium leading-6 text-gray-900">Height</label>
+          <div class="relative">
+            <input type="text" name="Height" id="height-input" class="block w-full py-3 px-4 ps-20 rounded-md border-0  text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Centimeter">
+            <div class="absolute inset-y-0 start-0 flex items-center text-gray-500 ps-px">
+              <label for="hs-inline-leading-select-country" class="sr-only">Heigt</label>
+              <select id="height-option" name="currency" class="h-full rounded-md border-0 bg-transparent py-0 pl-1 pr-7 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
+                <option value="cm">cm</option>
+                <option value="ft">Ft</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    
+      <br>
+      <div id="display"></div>
+    </div>
+    <input type="hidden" id="id" value="">
+    <button class="compute bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+      Compute
+    </button>
+        <span class="form-end"></span>
+    </form>
+  
+
+  
 
   <script src="build/app.bundle.js"></script>
 </body>
